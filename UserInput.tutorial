@@ -1,0 +1,18 @@
+Spectrum =      /Tutorial/synthetic_binary_070-030.dat
+Variance =      /
+wavel_beg =     5000
+wavel_end =     5800
+
+Regular =       0.001
+Result =        /Tutorial/
+
+Nr of LSDs =    3
+Line limits =   0.40 0.60
+
+Model =         /Tutorial/lp0000_08500_0340_0020_on_new.lin
+vel_beg =       -130
+vel_end =       10
+
+Model =         /Tutorial/lm0003_07300_0350_0020_on_new.lin
+vel_beg =       40
+vel_end =       120
