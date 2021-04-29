@@ -1,0 +1,15 @@
+! Integrals of the LSD profiles for the different models and their sum
+   4.00281780     3.87451628     6.20285701    14.08019108
+   2.12862978     1.52088867     2.24113373     5.89065218
+! Standard deviations
+Initial model evaluation: Standard dev = 0.005168 ( 0.517%)
+Iteration  1: Standard dev = 0.001979 ( 0.198%)
+Iteration  2: Standard dev = 0.001200 ( 0.120%)
+Iteration  3: Standard dev = 0.001021 ( 0.102%)
+Iteration  4: Standard dev = 0.000938 ( 0.094%)
+Iteration  5: Standard dev = 0.000892 ( 0.089%)
+Iteration  6: Standard dev = 0.000862 ( 0.086%)
+Iteration  7: Standard dev = 0.000841 ( 0.084%)
+Iteration  8: Standard dev = 0.000824 ( 0.082%)
+Iteration  9: Standard dev = 0.000810 ( 0.081%)
+Iteration 10: Standard dev = 0.000797 ( 0.080%)
