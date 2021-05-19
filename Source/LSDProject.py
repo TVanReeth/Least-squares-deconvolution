@@ -65,21 +65,23 @@ def ReadUserInput():
 
 
     
-def PlotResults(specname,result,wb,we,modcount, nlsd, lim):
+def PlotResults(specname,result,wb,we,modcount, nlsd, limm):
     plt.figure()
     clrs = ['b','r','y','g','c','m']
     symb = ['-','--','-.']
     
     expl = []
-    lim = [0.] + lim + [1.]
-    lim = np.array(lim)
+    print(limm)
+    limm = [0.] + list(limm) + [1.]
+    lim = np.array(limm)[::-1]
+    print(lim)
     for i in np.arange(1,modcount+1):
       lsd = np.loadtxt(result+'comp'+str(i)+'.lsd')
       if(i == 1):
           for j in np.arange(1,nlsd+1):
             fmtstr = f'{clrs[j-1]}{symb[j-1]}'
             plt.plot(lsd[:,0],lsd[:,j],fmtstr)
-            expl.append('line depth = '+str(int(50.*(float(lim[j-1])+float(lim[j]))))+'%')
+            expl.append('flux at line centre = '+str(int(50.*(float(lim[j-1])+float(lim[j]))))+'%')
           if(nlsd > 1):
             plt.legend(tuple(expl),loc='upper right')
       for j in np.arange(1,1+nlsd):
@@ -88,6 +90,7 @@ def PlotResults(specname,result,wb,we,modcount, nlsd, lim):
           plt.plot(lsd[:,0],lsd[:,j],fmtstr)
     plt.ylabel('LSD')
     plt.xlabel('Doppler velocity [km/s]')
+    
     plt.title(specname)
 
 
