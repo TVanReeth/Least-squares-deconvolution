@@ -1,6 +1,5 @@
-==================================================
-| Code for LSD-based Analysis of Stellar Spectra |
-==================================================
+Code for LSD-based Analysis of Stellar Spectra 
+==============================================
 
 This package contains the code I developed for my master thesis in cooperation with dr. Andrew Tkachenko. It consists of two major parts. The first computes the least-squares deconvolution profiles of the input spectrum, using the masks given in the UserInput.dat file. The second uses the same masks and the computed LSD profiles to build a reconstruction of the observed spectrum, but with a higher SNR. Both routines are written in Fortran 90/95, although a python script is included, which provides the commands to compile & run the code, and plot the results. More information on the used algorithms can be found in:
 https://ui.adsabs.harvard.edu/abs/1997MNRAS.291..658D/abstract
@@ -149,7 +148,7 @@ Finally, the computed LSD profiles and (if included) the reconstructed spectrum 
 $ python LSDProject.py -p
 
 
-Questions, remarks and information on encountered bugs can always be send to timothy.vanreeth@ster.kuleuven.be.
+Questions, remarks and information on encountered bugs can always be send to timothy.vanreeth@kuleuven.be.
 
 
 Good luck with your analyses!
