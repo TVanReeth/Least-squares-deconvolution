@@ -95,54 +95,6 @@ log:                     Contains the numerical integrals (computed with
                          discussed in my thesis text.
 
 
-***************************************************************************
-***************************************************************************
-***************************************************************************
-    THIS PART CAN BE IGNORED FOR NOW, UNTIL I UPDATE THE CODE TO WORK WITH THE NEW GFORTRAN COMPILERS.
-    
-    
-    The next files are also created, and form the input for the spectral reconstruction algorithm in the code.
-    
-    line_list.asc:           a file containing the locations of the different
-                             masks which are to be used
-    LSD_profile.asc:         a file containing the locations of the LSD
-                             profiles which were computed
-    LSC_noblocks_input.conf: file comparable to the UserInput.dat,
-                             specifically for the spectral reconstruction
-                             algorithm
-    
-    When using the python script, running the spectral reconstruction algorithm can be done by including the option "-m" or "--model":
-    
-    $ python LSDProject.py -m
-    
-    In this algorithm, the computed LSD profiles are reconvolved with the corresponding used line masks, 
-    and the line strengths are optimised, so that the resulting reconstruction matches the observed spectrum 
-    as well as possible. Keep in mind that, the faster the star in question is rotating, the more blending 
-    there will be, and the longer this part of the code will take. (The files in the tutorial were 
-    specifically chosen to illustrate the possibilities while being fairly fast. For instance HERMES spectra 
-    will take a bit longer, since they have a high resolution. On the plus side, this also implies generally good results.) 
-    
-    If the reconstruction is succesful, the following files appear in the results folder:
-    
-    improved_mask.lin:       a file with the "optimised" line strengths. Keep
-                             in mind that, due to a degeneracy between the
-                             individual lines, these values do not have
-                             physical meaning, even though the reconstructed
-                             spectrum has if the algorithm was succesful!
-    improved_model.dat:      the reconstruction of the observed spectrum
-    O-C.dat:                 the difference between the observed and the
-                             reconstructed spectrum. This file always has to
-                             be checked to see if the algorithm was succesful,
-                             before using the reconstructed spectrum!
-    
-    
-    In addition, the average standard deviation for each iteration is printed to both the terminal window, and the log file. 
-
-***************************************************************************
-***************************************************************************
-***************************************************************************
-
-
 Finally, the computed LSD profiles and (if included) the reconstructed spectrum can be plotted by adding the option "-p" or "--plot" when running the python script.
 
 $ python LSDProject.py -p
